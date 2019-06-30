@@ -1,0 +1,208 @@
+EESchema Schematic File Version 4
+LIBS:GPSLogger-cache
+LIBS:weatherStation-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 3
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 8400 1550 0    60   Input ~ 0
+Fun_Btn_1_P23
+Wire Wire Line
+	8400 1550 8650 1550
+Wire Wire Line
+	5550 950  5650 950 
+Wire Wire Line
+	5650 950  5650 1150
+$Comp
+L Device:LED D?
+U 1 1 5BC19163
+P 5650 1300
+F 0 "D?" V 5688 1183 50  0000 R CNN
+F 1 "LED_B" V 5597 1183 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 5650 1300 50  0001 C CNN
+F 3 "~" H 5650 1300 50  0001 C CNN
+	1    5650 1300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5BC1920B
+P 5650 1600
+F 0 "R?" H 5720 1646 50  0000 L CNN
+F 1 "5.6" H 5720 1555 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 5580 1600 50  0001 C CNN
+F 3 "~" H 5650 1600 50  0001 C CNN
+	1    5650 1600
+	1    0    0    -1  
+$EndComp
+Text GLabel 5550 950  0    60   Input ~ 0
+LED1_P2
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5BC1A737
+P 5650 2000
+F 0 "#PWR?" H 5650 1850 50  0001 C CNN
+F 1 "+3.3V" H 5665 2173 50  0000 C CNN
+F 2 "" H 5650 2000 50  0001 C CNN
+F 3 "" H 5650 2000 50  0001 C CNN
+	1    5650 2000
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5BC1E3F7
+P 8650 1450
+F 0 "#PWR?" H 8650 1300 50  0001 C CNN
+F 1 "+3.3V" H 8665 1623 50  0000 C CNN
+F 2 "" H 8650 1450 50  0001 C CNN
+F 3 "" H 8650 1450 50  0001 C CNN
+	1    8650 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 5BC1E418
+P 8850 1550
+F 0 "J?" H 8823 1430 50  0000 R CNN
+F 1 "BTN1" H 8823 1521 50  0000 R CNN
+F 2 "CustomFP:ebay_RA_Mom_switch" H 8850 1550 50  0001 C CNN
+F 3 "~" H 8850 1550 50  0001 C CNN
+	1    8850 1550
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5BC1E52A
+P 8650 1700
+F 0 "R?" H 8720 1746 50  0000 L CNN
+F 1 "10k" H 8720 1655 50  0000 L CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" V 8580 1700 50  0001 C CNN
+F 3 "~" H 8650 1700 50  0001 C CNN
+	1    8650 1700
+	1    0    0    -1  
+$EndComp
+Connection ~ 8650 1550
+Text GLabel 10050 2350 0    60   Input ~ 0
+BattRtn
+Wire Wire Line
+	5650 1750 5650 2000
+$Comp
+L power:+5V #PWR?
+U 1 1 5C8667F2
+P 1600 1550
+F 0 "#PWR?" H 1600 1400 50  0001 C CNN
+F 1 "+5V" H 1615 1723 50  0000 C CNN
+F 2 "" H 1600 1550 50  0001 C CNN
+F 3 "" H 1600 1550 50  0001 C CNN
+	1    1600 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1450 1550 1600 1550
+$Comp
+L power:GND #PWR?
+U 1 1 5C866801
+P 1900 1550
+F 0 "#PWR?" H 1900 1300 50  0001 C CNN
+F 1 "GND" H 2000 1600 50  0000 R CNN
+F 2 "" H 1900 1550 50  0001 C CNN
+F 3 "" H 1900 1550 50  0001 C CNN
+	1    1900 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C866807
+P 1150 2150
+F 0 "#PWR?" H 1150 1900 50  0001 C CNN
+F 1 "GND" H 1155 2022 50  0000 R CNN
+F 2 "" H 1150 2150 50  0001 C CNN
+F 3 "" H 1150 2150 50  0001 C CNN
+	1    1150 2150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1450 1950
+Text Notes 2250 850  0    50   ~ 0
+USB
+Wire Notes Line
+	850  750  850  2800
+Wire Notes Line
+	850  2800 4300 2800
+Wire Notes Line
+	4300 2800 4300 750 
+Wire Notes Line
+	850  750  4300 750 
+Text GLabel 1650 1100 2    50   Input ~ 0
+USB_PWR
+$Comp
+L power:+5V #PWR?
+U 1 1 5C86686C
+P 1650 1100
+F 0 "#PWR?" H 1650 950 50  0001 C CNN
+F 1 "+5V" H 1665 1273 50  0000 C CNN
+F 2 "" H 1650 1100 50  0001 C CNN
+F 3 "" H 1650 1100 50  0001 C CNN
+	1    1650 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L CustomComponents:USB_B_Micro J?
+U 1 1 5C866873
+P 1150 1750
+F 0 "J?" H 1205 2217 50  0000 C CNN
+F 1 "USB_B_Micro" H 1205 2126 50  0000 C CNN
+F 2 "CustomFP:USB_Micro-B_Adafruit" H 1300 1700 50  0001 C CNN
+F 3 "~" H 1300 1700 50  0001 C CNN
+	1    1150 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C846087
+P 8650 1850
+F 0 "#PWR?" H 8650 1600 50  0001 C CNN
+F 1 "GND" H 8655 1722 50  0000 R CNN
+F 2 "" H 8650 1850 50  0001 C CNN
+F 3 "" H 8650 1850 50  0001 C CNN
+	1    8650 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5C8461DC
+P 10050 2350
+F 0 "#PWR?" H 10050 2100 50  0001 C CNN
+F 1 "GND" H 10055 2222 50  0000 R CNN
+F 2 "" H 10050 2350 50  0001 C CNN
+F 3 "" H 10050 2350 50  0001 C CNN
+	1    10050 2350
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1050 2150
+Wire Wire Line
+	1450 1750 1650 1750
+Wire Wire Line
+	1450 1850 1650 1850
+Connection ~ 1600 1550
+$Comp
+L Device:C C?
+U 1 1 5C8667F9
+P 1750 1550
+F 0 "C?" V 1600 1550 50  0000 C CNN
+F 1 "100nF" V 1500 1600 50  0000 C CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1788 1400 50  0001 C CNN
+F 3 "~" H 1750 1550 50  0001 C CNN
+	1    1750 1550
+	0    1    1    0   
+$EndComp
+$EndSCHEMATC

@@ -26,7 +26,7 @@ private:
 public:
 	SAMD21Timers(uint8_t timernum,uint8_t glckNum);
 	~SAMD21Timers();
-		void tcConfigure(int sampleRate);
+		void tcConfigure(int sampleRate, int prescaler);
 		bool tcIsSyncing();
 		void tcStartCounter();
 		void tcReset();

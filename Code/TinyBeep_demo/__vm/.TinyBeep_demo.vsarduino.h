@@ -8,27 +8,21 @@
 	Hardware: SAMD21 Custom, Platform=samd, Package=arduino
 */
 
-#define ARDUINO 10806
+#define ARDUINO 10809
 #define ARDUINO_MAIN
 #define F_CPU 48000000L
 #define printf iprintf
 #define __SAMD__
 #define F_CPU 48000000L
-#define ARDUINO 10806
+#define ARDUINO 10809
 #define ARDUINO_SAMD_ZERO
 #define ARDUINO_ARCH_SAMD
 #define __SAMD21G18A__
 #define USB_VID 0x2341
 #define USB_PID 0x804d
 #define USBCON
-//
-//
-void TC5_Handler (void);
-void TC4_Handler (void);
-void setup_BME280();
-void BME_Force();
 
 #include "pins_arduino.h" 
 #include "variant.h" 
 #include "arduino.h"
-#include "TinyBeep_Demo.ino"
+#include "TinyBeep.ino"

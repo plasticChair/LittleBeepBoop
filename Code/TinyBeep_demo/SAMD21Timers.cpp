@@ -23,7 +23,7 @@ SAMD21Timers::~SAMD21Timers()
 {
 } //~SAMD21Timers
 
- void SAMD21Timers::tcConfigure(int sampleRate)
+ void SAMD21Timers::tcConfigure(int sampleRate, int prescaler)
  {
 	 //                               3                                           4                            5
 	 uint32_t inst_gclk_id[] = {GCLK_CLKCTRL_ID_TCC2_TC3, GCLK_CLKCTRL_ID_TC4_TC5, GCLK_CLKCTRL_ID_TC4_TC5};
@@ -46,7 +46,7 @@ SAMD21Timers::~SAMD21Timers()
 	 SYSCTRL->OSC8M.reg |= SYSCTRL_OSC8M_ENABLE;
 
 	 // Gen Clock setup
-	GCLK->GENDIV.reg  = (uint32_t) (GCLK_GENDIV_ID(_glckNum) | GCLK_GENDIV_DIV(1));
+	GCLK->GENDIV.reg  = (uint32_t) (GCLK_GENDIV_ID(_glckNum) | GCLK_GENDIV_DIV(prescaler));
 	while (GCLK->STATUS.bit.SYNCBUSY);
  
 	GCLK->GENCTRL.reg = (uint32_t) (GCLK_GENCTRL_RUNSTDBY | GCLK_GENCTRL_GENEN | GCLK_GENCTRL_SRC_OSC8M | GCLK_GENCTRL_ID(_glckNum));
@@ -65,7 +65,7 @@ SAMD21Timers::~SAMD21Timers()
 	 //set prescaler and enable _hw
 	 _hw->COUNT16.CTRLA.reg |= TC_CTRLA_PRESCALER_DIV1 | TC_CTRLA_ENABLE;
 	 //set _hw timer counter based off of the system clock and the user defined sample rate or waveform
-	 _hw->COUNT16.CC[0].reg = (uint16_t) ((8000000 / 2) / sampleRate -1);
+	 _hw->COUNT16.CC[0].reg = (uint16_t) ((8000000 / prescaler) / sampleRate -1);
 	 while (tcIsSyncing());
 	 
 	 // Configure interrupt request

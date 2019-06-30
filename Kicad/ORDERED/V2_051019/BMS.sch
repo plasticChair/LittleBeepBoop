@@ -1,0 +1,506 @@
+EESchema Schematic File Version 4
+LIBS:littlebeepboop-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 2
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Label 3300 1850 0    50   ~ 0
+Batt+
+Text Label 1400 2000 2    50   ~ 0
+Batt_int
+Wire Wire Line
+	1850 2100 2500 2100
+Wire Wire Line
+	1850 2800 1850 2300
+Wire Wire Line
+	2500 2100 2500 1850
+Wire Wire Line
+	2500 1850 4450 1850
+$Comp
+L Device:R_Small_US R7
+U 1 1 5C1F2B79
+P 6550 2000
+F 0 "R7" V 6600 2100 50  0000 C CNN
+F 1 "330" V 6500 2000 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6550 2000 50  0001 C CNN
+F 3 "~" H 6550 2000 50  0001 C CNN
+	1    6550 2000
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5C1F34EC
+P 6800 2000
+F 0 "D2" H 6900 1900 50  0000 C CNN
+F 1 "LED" H 6750 1900 50  0000 C CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 6800 2000 50  0001 C CNN
+F 3 "~" H 6800 2000 50  0001 C CNN
+	1    6800 2000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6150 2000 6150 1850
+Connection ~ 6150 1850
+$Comp
+L Device:R_Small_US R9
+U 1 1 5C1F45AD
+P 7550 2900
+F 0 "R9" V 7600 3000 50  0000 C CNN
+F 1 "750" V 7450 2900 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 7550 2900 50  0001 C CNN
+F 3 "~" H 7550 2900 50  0001 C CNN
+	1    7550 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7350 2800 7350 3000
+Wire Wire Line
+	7350 3000 7550 3000
+Connection ~ 7550 3000
+Wire Wire Line
+	7350 3000 5000 3000
+Wire Wire Line
+	5000 3000 5000 2800
+Connection ~ 7350 3000
+$Comp
+L Connector_Generic:Conn_01x02 J6
+U 1 1 5C1F5970
+P 9700 1800
+F 0 "J6" H 9780 1792 50  0000 L CNN
+F 1 "Conn_01x02" H 9780 1701 50  0000 L CNN
+F 2 "kicad-open-modules:2_PIN_SMD" H 9700 1800 50  0001 C CNN
+F 3 "~" H 9700 1800 50  0001 C CNN
+	1    9700 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9000 1900 9000 3000
+Wire Wire Line
+	9000 3000 8550 3000
+$Comp
+L Device:C_Small C19
+U 1 1 5C1F6717
+P 8550 1900
+F 0 "C19" H 8642 1946 50  0000 L CNN
+F 1 "0.1uF" H 8642 1855 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 8550 1900 50  0001 C CNN
+F 3 "~" H 8550 1900 50  0001 C CNN
+	1    8550 1900
+	1    0    0    -1  
+$EndComp
+Connection ~ 8550 1800
+Wire Wire Line
+	8550 2000 8550 3000
+Connection ~ 8550 3000
+Wire Wire Line
+	8050 1800 8550 1800
+$Comp
+L Device:C_Small C18
+U 1 1 5C1F9204
+P 7250 3900
+F 0 "C18" H 7158 3854 50  0000 R CNN
+F 1 "0.1uF" H 7158 3945 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7250 3900 50  0001 C CNN
+F 3 "~" H 7250 3900 50  0001 C CNN
+	1    7250 3900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7250 3800 7600 3800
+Wire Wire Line
+	7250 3700 7250 3800
+Connection ~ 7250 3800
+Wire Wire Line
+	7250 4000 7600 4000
+Connection ~ 7600 4000
+Connection ~ 5550 1850
+Text GLabel 8300 3800 2    50   Input ~ 0
+SDA
+Text GLabel 8300 3900 2    50   Input ~ 0
+SCL
+Text GLabel 8300 3700 2    50   Input ~ 0
+BATT_ALRT
+Wire Notes Line
+	5350 1400 5350 3100
+Wire Notes Line
+	5350 3100 2200 3100
+Wire Notes Line
+	2200 3100 2200 1400
+Wire Notes Line
+	2200 1400 5350 1400
+Wire Notes Line
+	5850 3150 8750 3150
+Wire Notes Line
+	8750 1400 5850 1400
+Wire Notes Line
+	8750 1400 8750 3150
+Wire Notes Line
+	5850 1400 5850 3150
+Text Notes 3200 1500 0    50   ~ 0
+Battery Protection
+Text Notes 6100 1500 0    50   ~ 0
+Solar Charger
+Wire Notes Line
+	7200 3350 8800 3350
+Wire Notes Line
+	8800 3350 8800 4150
+Wire Notes Line
+	8800 4150 7200 4150
+Wire Notes Line
+	7200 4150 7200 3350
+Text Notes 8200 3450 0    50   ~ 0
+Battery Monitor
+$Comp
+L Switch:SW_SPDT SW?
+U 1 1 5C2339B4
+P 1650 2000
+AR Path="/5C2339B4" Ref="SW?"  Part="1" 
+AR Path="/5C1E5C92/5C2339B4" Ref="SW?"  Part="1" 
+AR Path="/5B0E6D4D/5C2339B4" Ref="SW1"  Part="1" 
+F 0 "SW1" H 1650 2285 50  0000 C CNN
+F 1 "SW_SPDT" H 1650 2194 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 1650 2000 50  0001 C CNN
+F 3 "" H 1650 2000 50  0001 C CNN
+	1    1650 2000
+	1    0    0    -1  
+$EndComp
+NoConn ~ 1850 1900
+Wire Wire Line
+	1400 2100 1400 2000
+Wire Wire Line
+	1400 2000 1450 2000
+$Comp
+L Connector_Generic:Conn_01x03 J4
+U 1 1 5C26230A
+P 1200 2200
+F 0 "J4" H 1350 1900 50  0000 C CNN
+F 1 "Conn_01x03" H 1400 2000 50  0000 C CNN
+F 2 "CustomFP:SMD_3Pin_2.54mm" H 1200 2200 50  0001 C CNN
+F 3 "~" H 1200 2200 50  0001 C CNN
+	1    1200 2200
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	1400 2300 1850 2300
+Wire Wire Line
+	8300 4000 8300 4100
+Wire Wire Line
+	8300 4100 7600 4100
+Wire Wire Line
+	7600 4100 7600 4000
+Text Label 8300 1800 0    50   ~ 0
+Solar+
+$Comp
+L CustomComponents:MAX17048 U6
+U 1 1 5C3982DE
+P 8250 3250
+F 0 "U6" H 7950 3115 50  0000 C CNN
+F 1 "MAX17048" H 7950 3024 50  0000 C CNN
+F 2 "CustomFP:TQFN-8_2x2x0.75" H 8250 3250 50  0001 C CNN
+F 3 "" H 8250 3250 50  0001 C CNN
+	1    8250 3250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7600 3900 7600 4000
+Wire Wire Line
+	9000 1900 9500 1900
+Text Label 2000 2800 0    50   ~ 0
+Batt-
+Wire Wire Line
+	7250 3700 7600 3700
+Wire Wire Line
+	5550 1850 5550 3700
+Connection ~ 7250 3700
+Connection ~ 7250 4000
+Text Label 6850 3600 0    50   ~ 0
+BattMon+
+Text Label 6850 3900 0    50   ~ 0
+BattMon-
+Wire Wire Line
+	6850 3900 6850 4000
+Wire Wire Line
+	6850 4000 7250 4000
+Wire Wire Line
+	6850 3600 6850 3700
+Wire Wire Line
+	6850 3700 7250 3700
+Connection ~ 6850 3700
+Wire Wire Line
+	8550 1800 9250 1800
+Wire Wire Line
+	6950 2000 7050 2000
+$Comp
+L Device:Jumper_NO_Small JP1
+U 1 1 5C77B575
+P 6300 2000
+F 0 "JP1" H 6300 2185 50  0000 C CNN
+F 1 "J_NO" H 6250 1950 50  0000 C CNN
+F 2 "Jumpers:SMT-JUMPER_2_NO_NO-SILK" H 6300 2000 50  0001 C CNN
+F 3 "~" H 6300 2000 50  0001 C CNN
+	1    6300 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 2000 6400 2000
+Wire Wire Line
+	6150 2000 6200 2000
+$Comp
+L Device:Solar_Cell SC1
+U 1 1 5C89AA12
+P 10250 2200
+F 0 "SC1" H 10358 2296 50  0000 L CNN
+F 1 "Solar_Cell" H 10358 2205 50  0000 L CNN
+F 2 "CustomFP:solarCell_53x30mm" V 10250 2260 50  0001 C CNN
+F 3 "~" V 10250 2260 50  0001 C CNN
+	1    10250 2200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Battery BT1
+U 1 1 5C8A610E
+P 800 2750
+F 0 "BT1" H 908 2796 50  0000 L CNN
+F 1 "Battery" H 908 2705 50  0000 L CNN
+F 2 "CustomFP:lipo_1cell_300mah" V 800 2810 50  0001 C CNN
+F 3 "~" V 800 2810 50  0001 C CNN
+	1    800  2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1850 2800 4450 2800
+Text GLabel 6150 4600 0    60   Input ~ 0
+BattPwr
+$Comp
+L CustomComponents:LM3671 U7
+U 1 1 5C8E4E3E
+P 6750 4400
+F 0 "U7" H 6750 4425 50  0000 C CNN
+F 1 "LM3671" H 6750 4334 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 6750 4400 50  0001 C CNN
+F 3 "" H 6750 4400 50  0001 C CNN
+	1    6750 4400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 4600 6300 4600
+Wire Wire Line
+	6450 4700 6300 4700
+Wire Wire Line
+	6300 4700 6300 4600
+Connection ~ 6300 4600
+Wire Wire Line
+	6300 4600 6450 4600
+Wire Wire Line
+	6750 5050 6750 5000
+$Comp
+L pspice:INDUCTOR L4
+U 1 1 5C8E4E4D
+P 7300 4600
+F 0 "L4" H 7300 4815 50  0000 C CNN
+F 1 "INDUCTOR" H 7300 4724 50  0000 C CNN
+F 2 "Inductor_SMD:L_0805_2012Metric" H 7300 4600 50  0001 C CNN
+F 3 "~" H 7300 4600 50  0001 C CNN
+	1    7300 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7050 4800 7550 4800
+Wire Wire Line
+	7550 4800 7550 4600
+$Comp
+L Device:C C21
+U 1 1 5C8E4E56
+P 7850 4750
+F 0 "C21" H 7965 4796 50  0000 L CNN
+F 1 "C" H 7965 4705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 7888 4600 50  0001 C CNN
+F 3 "~" H 7850 4750 50  0001 C CNN
+	1    7850 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7850 4600 7550 4600
+Connection ~ 7550 4600
+Wire Wire Line
+	6750 5050 7850 5050
+Wire Wire Line
+	7850 5050 7850 4900
+Connection ~ 6750 5050
+Wire Wire Line
+	8100 4600 7850 4600
+Connection ~ 7850 4600
+Text GLabel 8100 4600 2    60   Input ~ 0
+Vdd
+Text GLabel 5050 1850 1    60   Input ~ 0
+BattPwr
+Text GLabel 6350 4200 2    60   Input ~ 0
+BattRtn
+Text GLabel 9950 1250 2    60   Input ~ 0
+USB_PWR
+$Comp
+L Device:D D4
+U 1 1 5C955434
+P 9800 1250
+F 0 "D4" H 9800 1466 50  0000 C CNN
+F 1 "D" H 9800 1375 50  0000 C CNN
+F 2 "Diode_SMD:D_SOD-323_HandSoldering" H 9800 1250 50  0001 C CNN
+F 3 "~" H 9800 1250 50  0001 C CNN
+	1    9800 1250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9650 1250 9250 1250
+Wire Wire Line
+	9250 1250 9250 1800
+Connection ~ 9250 1800
+Wire Wire Line
+	9250 1800 9500 1800
+Wire Wire Line
+	5550 1850 6150 1850
+Wire Wire Line
+	7550 3000 8550 3000
+NoConn ~ 7750 2800
+$Comp
+L Device:Net-Tie_2 NT2
+U 1 1 5C9B11AC
+P 6150 4200
+F 0 "NT2" H 6150 4378 50  0000 C CNN
+F 1 "Net-Tie_2" H 6150 4300 50  0000 C CNN
+F 2 "NetTie:NetTie-2_SMD_Pad0.5mm" H 6150 4200 50  0001 C CNN
+F 3 "~" H 6150 4200 50  0001 C CNN
+	1    6150 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5550 3700 6850 3700
+Wire Wire Line
+	6250 4200 6350 4200
+Wire Wire Line
+	5000 5050 5000 4200
+Wire Wire Line
+	5000 5050 6750 5050
+Connection ~ 5000 3000
+Wire Wire Line
+	6050 4200 5000 4200
+Connection ~ 5000 4200
+Wire Wire Line
+	5000 4200 5000 3000
+Wire Wire Line
+	6850 4000 6250 4000
+Wire Wire Line
+	6250 4000 6250 4200
+Connection ~ 6850 4000
+Connection ~ 6250 4200
+$Comp
+L Device:R_Small_US R6
+U 1 1 5CCEF307
+P 6550 2150
+F 0 "R6" V 6600 2250 50  0000 C CNN
+F 1 "10k" V 6500 2150 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6550 2150 50  0001 C CNN
+F 3 "~" H 6550 2150 50  0001 C CNN
+	1    6550 2150
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6450 2150 6150 2150
+Wire Wire Line
+	6150 2150 6150 2000
+Connection ~ 6150 2000
+Wire Wire Line
+	6650 2150 6900 2150
+Text GLabel 6500 2450 0    50   Input ~ 0
+CHRG_EN
+$Comp
+L Device:R_Small_US R8
+U 1 1 5CCF492D
+P 6900 2300
+F 0 "R8" V 6950 2400 50  0000 C CNN
+F 1 "10k" V 6850 2300 50  0000 C CNN
+F 2 "Resistor_SMD:R_0603_1608Metric" H 6900 2300 50  0001 C CNN
+F 3 "~" H 6900 2300 50  0001 C CNN
+	1    6900 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 2200 6900 2150
+Wire Wire Line
+	6150 1850 7050 1850
+Connection ~ 6900 2150
+Wire Wire Line
+	6900 2150 7050 2150
+Wire Wire Line
+	6500 2450 6900 2450
+Wire Wire Line
+	6900 2400 6900 2450
+Connection ~ 6900 2450
+Wire Wire Line
+	6900 2450 7050 2450
+$Comp
+L CustomComponents:BQ24210 U5
+U 1 1 5CD2824D
+P 7650 1150
+F 0 "U5" H 7750 767 50  0000 C CNN
+F 1 "BQ24210" H 7750 676 50  0000 C CNN
+F 2 "Package_SON:WSON-10-1EP_2x3mm_P0.5mm_EP0.84x2.4mm" H 7650 1150 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/bq24210.pdf" H 7750 650 50  0001 C CNN
+	1    7650 1150
+	-1   0    0    -1  
+$EndComp
+NoConn ~ 1400 2200
+$Comp
+L Device:Jumper_NC_Small JP8
+U 1 1 5CD5E33E
+P 8200 2400
+F 0 "JP8" V 8154 2474 50  0000 L CNN
+F 1 "Jumper_NC_Small" V 8245 2474 50  0000 L CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 8200 2400 50  0001 C CNN
+F 3 "~" H 8200 2400 50  0001 C CNN
+	1    8200 2400
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	8050 2350 8100 2350
+Wire Wire Line
+	8100 2350 8100 2300
+Wire Wire Line
+	8100 2300 8200 2300
+Wire Wire Line
+	8050 2450 8100 2450
+Wire Wire Line
+	8100 2450 8100 2500
+Wire Wire Line
+	8100 2500 8200 2500
+$Comp
+L Device:C_Small C?
+U 1 1 5CE30E2A
+P 4450 2250
+F 0 "C?" H 4542 2296 50  0000 L CNN
+F 1 "0.1uF" H 4542 2205 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 4450 2250 50  0001 C CNN
+F 3 "~" H 4450 2250 50  0001 C CNN
+	1    4450 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 2150 4450 1850
+Connection ~ 4450 1850
+Wire Wire Line
+	4450 1850 5550 1850
+Wire Wire Line
+	4450 2350 4450 2800
+Connection ~ 4450 2800
+Wire Wire Line
+	4450 2800 5000 2800
+$EndSCHEMATC
